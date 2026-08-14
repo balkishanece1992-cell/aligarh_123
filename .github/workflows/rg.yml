@@ -20,17 +20,22 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        working-directory: ./Environment/dev
+        working-directory: .github/workflows/rg.yml
+
         run: terraform init
 
       - name: Terraform Validate
-        working-directory: ./Environment/dev
+        working-directory: .github/workflows/rg.yml
+
         run: terraform validate
 
       - name: Terraform Plan
-        working-directory: ./Environment/dev
+        working-directory: .github/workflows/rg.yml
+
+
         run: terraform plan
 
       - name: Terraform Apply
-        working-directory: ./Environment/dev
+        working-directory: .github/workflows/rg.yml
+
         run: terraform apply -auto-approve
